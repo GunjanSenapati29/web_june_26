@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Novell Services Login</h1>
+
+    <form action="#">
+        <label for="fullname">Username:</label>
+        <input type="text" name="username" placeholder="Enter Username" id="fullname">
+
+        <br> <br>
+
+        <label for="p">Password:</label>
+        <input type="password" name="password" placeholder="Enter Password" id="p">
+
+        <br> <br>
+
+        <label for="city">City of Employment:</label>
+        <input type="text" name="employment" placeholder="" id="city">
+
+        <br> <br>
+
+        <label for="server">Web Server:</label>
+        <select name="webServer" id="webServer">
+            <option value="">-- Choose a server --</option>
+            <option value="apache">Apache Server</option>
+            <option value="nginx">Nginx Server</option>
+            <option value="iis">Microsoft IIS</option>
+            <option value="tomcat">Apache Tomcat</option>
+            <option value="lighttpd">Lighttpd</option>
+        </select>
+
+        <br> <br>
+
+        <label for="role">Please specify your role:</label>
+        <div>
+        <input type="radio" name="role" placeholder="" id="admin" value="admin"> <label for="admin">Admin</label><br>
+        <input type="radio" name="role" placeholder="" id="engineer" value="engineer"> <label
+            for="engineer">Engineer</label> <br>
+        <input type="radio" name="role" placeholder="" id="manager" value="manager"> <label
+            for="manager">Manager</label><br>
+        <input type="radio" name="role" placeholder="" id="guest" value="guest"> <label 
+            for="guest">Guest</label>
+
+        </div>
+
+        <br> <br>
+
+         <label for="country">Single Sign-on to the following:</label>
+         <div>
+         <input type="checkbox" name="Sign-on" id="Sign-on">
+         <label for="Sign-on">Mail</label><br>
+         <input type="checkbox" name="Sign-on" id="Sign-on">
+         <label for="Sign-on">Payroll</label><br>
+         <input type="checkbox" name="Sign-on" id="Sign-on">
+         <label for="Sign-on">Self-service</label><br>
+         </div>
+         
+        <br>
+        <br> 
+        <div style="text-align: center;">
+            <button type="submit">Login</button> <button type="reset">Reset</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
