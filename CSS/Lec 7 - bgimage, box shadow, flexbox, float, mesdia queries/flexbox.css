@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    height: 60px;
+    width: 100px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.container {
+    height: 300px;
+    border: 2px solid black;
+    width: 80%;
+    margin: 10px auto;
+    background-color: lightgray;
+
+    /* Flexbox */
+    display: flex;
+    /* flex-direction: column;
+
+    justify-content: center; */
+
+    /* flex-direction: row;
+    align-items: center; */
+
+    /* flex-direction: column;
+    align-items: center; */
+
+    /* flex-direction: column;
+    flex-wrap: wrap; consume the give amount of height */
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#violet {
+    align-self: flex-end;
+}
+/* By default flex direction is row */
+/* Flex-dirention = row, Justify Content = Horizontal, align-items = Vertically */
+/* Flex-dirention = Column, Justify Content = Vertical, align-items = Horizonally */
+
+
+
+
+/* JUSTIFY CONTENT */
+/* flex-start, flex-end, center, space-between, space-around, space-evenly */
+
+/* ALIGN-ITEMS */
+/* flex-start, flex-end, center */
