@@ -44,12 +44,24 @@
 // }, 5000)
 // console.log("Gunjan")
 
-function f1(){
-    console.log('Hiiiiiiiii')
+// function f1(){
+//     console.log('Hiiiiiiiii')
+// }
+// const intervalid = setInterval(f1, 2000)
+// console.log("//////////", intervalid)
+// setTimeout(function f2(){
+//     console.log("Clearing Interval")
+//     clearInterval(intervalid)
+// }, 10000)
+
+function fun(){
+    console.log("Gunjan")
 }
-const intervalid = setInterval(f1, 2000)
-console.log("//////////", intervalid)
-setTimeout(function f2(){
+
+const interval = setInterval(fun, 20000)
+console.log("////////////", interval)
+const timer = setTimeout(function() {
     console.log("Clearing Interval")
-    clearInterval(intervalid)
+    clearInterval(interval)
+    clearTimeout(timer)
 }, 10000)
