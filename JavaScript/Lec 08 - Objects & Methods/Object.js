@@ -78,8 +78,8 @@
 
 // ============== TASK 01 ===============
 const employee = {
-    fullname : 'Alina Scott', // Key 1
-    age : 32, // Key 2
+    fullname : 'Alina Scott', 
+    age : 32, 
     personal: { // Nested Object 1
         gender: "Female",
         bloodGroup: "O+",
