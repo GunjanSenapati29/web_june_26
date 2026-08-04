@@ -52,3 +52,45 @@ if(fruits.includes("Kiwi")){
     // if not exist then do nothing
     alert("Search element is not avaliable.")
 }
+
+fruits.push("Mango", "Orange")
+console.log("Last Index of Mango",fruits.lastIndexOf("Mango"))
+console.log(fruits.slice(0, 3))
+console.log(fruits.slice(1, 3))
+console.log(fruits.slice(2))
+console.log(fruits.slice())
+
+// splice
+// fruits.splice(2, 3)
+// console.log("After splice",fruits)
+
+fruits.splice(2, 3, "Cherry")
+console.log("After splice ",fruits)
+
+// concat
+const numbers = [10, 20, 30]
+const fruitsWithNumbers = fruits.concat(numbers)
+console.log("Fruits with numbers: ",fruitsWithNumbers)
+
+const fruitsString = fruits.join('-')
+console.log("After join: ",fruitsString)
+
+console.log(fruits)
+fruits.reverse()
+console.log("After reverse:", fruits)
+
+fruits.sort()
+console.log("After sort:", fruits)
+
+fruits.push(57, 21, 31, 100)
+fruits.sort()
+console.log("After sort", fruits)
+
+
+const arr = [10, 20, 30, 5]
+arr.sort(xyz)
+console.log(arr)
+
+function xyz(a, b){
+    return a-b
+}
