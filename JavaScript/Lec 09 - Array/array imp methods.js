@@ -87,3 +87,31 @@ console.log(obj)
 
 // =============== filter() Function =================
 // numbers = [10, 11, 20, 21, 30, 31]
+
+// // const divisibleByTen = numbers.filter((value, idx, arr) => {
+// //   console.log("value is", value, "at idx", idx, "of array", arr)
+
+// //   return value % 10 == 0
+// // })
+// // console.log("divisible By ten", divisibleByTen)
+// // divisibleByTen.forEach(value => console.log(value))
+
+// numbers.filter()
+
+// =========================== some()
+// numbers = [10, 20, 30, 40, 41, 51]
+// const isAnyOddPresent = numbers.some(num => num % 2 == 1)
+// console.log("///// is Any Odd Present", isAnyOddPresent)
+
+// const isEveryMemberAreEven = numbers.every(num => num % 2 == 0)
+// console.log("//// is every members are even", isEveryMemberAreEven)
+
+
+// =========================== find(), findIndex()
+numbers = [10, 20, 30, 40,  51]
+
+const number = numbers.find(num => num == 41)
+console.log("is 41 found", number)
+
+const numberIdx = numbers.findIndex(num => num == 41)
+console.log("is 41 found", numberIdx)
