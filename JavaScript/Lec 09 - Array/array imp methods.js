@@ -1,4 +1,4 @@
-const numbers = [10, 20, 30, 40, 50]
+// const numbers = [10, 20, 30, 40, 50]
 
 // for(let i = 0; i < numbers.length; i++)
 //     console.log(numbers[i]);
@@ -43,28 +43,28 @@ const numbers = [10, 20, 30, 40, 50]
 // const squareNumbers = numbers.map(value => value*value)
 // console.log("Square of elements: ",squareNumbers)
 
-const users = [
-{
-    id: 101,
-    name: 'Gunjan Senapati',
-    salary: 100000
-},
-{
-    id: 102,
-    name: 'Snigdha Mohanty',
-    salary: 200000
-},
-{
-    id: 103,
-    name: 'Aiswarya Ayeshkant',
-    salary: 110000
-},
-{
-    id: 104,
-    name: 'Sambit Parida',
-    salary: 130000
-},
-]
+// const users = [
+// {
+//     id: 101,
+//     name: 'Gunjan Senapati',
+//     salary: 100000
+// },
+// {
+//     id: 102,
+//     name: 'Snigdha Mohanty',
+//     salary: 200000
+// },
+// {
+//     id: 103,
+//     name: 'Aiswarya Ayeshkant',
+//     salary: 110000
+// },
+// {
+//     id: 104,
+//     name: 'Sambit Parida',
+//     salary: 130000
+// },
+// ]
 
 // const obj = users.map(value => {
 //     return {
@@ -76,14 +76,14 @@ const users = [
 
 // console.log(obj)
 
-const obj = users.map(user => (
-    {
-        id: user.id,
-        firstname : user.name.split(" ")[0],
-        bonuses: user.salary*.10
-    }
-)) 
-console.log(obj)
+// const obj = users.map(user => (
+//     {
+//         id: user.id,
+//         firstname : user.name.split(" ")[0],
+//         bonuses: user.salary*.10
+//     }
+// )) 
+// console.log(obj)
 
 // =============== filter() Function =================
 // numbers = [10, 11, 20, 21, 30, 31]
@@ -115,3 +115,66 @@ console.log("is 41 found", number)
 
 const numberIdx = numbers.findIndex(num => num == 41)
 console.log("is 41 found", numberIdx)
+
+
+const sum = numbers.reduce((prevValue, currVal, idx, arr) => {
+    console.log("Previous value is",prevValue, "current value is", currVal, "at idx",idx, "of Array", arr)
+
+    return prevValue + currVal
+})
+
+console.log("///////////// Sum: ",sum)
+
+const orders = [
+    {
+        id: 101,
+        amount: 4000,
+        status: "Delivered"
+    },
+    {
+        id: 102,
+        amount: 4000,
+        status: "Pending"
+    },
+    {
+        id: 103,
+        amount: 6000,
+        status: "Delivered"
+    },
+]
+
+// 1. Find the order whose status is 'Delivered'
+const statusorder = orders.filter(id => id.status == "Delivered")
+
+const statusidx = orders.findIndex(id => id == "Delivered")
+
+console.log("The order whose status is Delivered is:\n1.Order:",statusorder)
+// 2. Merge the delivered orders amount to get the total sale 
+const total = statusorder.reduce((prev, curr) => {
+    console.log(".....Prev", prev, "......Curr", curr)
+    return typeof prev === "Object" ? prev.amount : + prev + curr.amount
+}, 0)
+
+console.log("/////Total sale:",total)
+
+const users = [
+  {
+    id: 1,
+    name: "Sarthak",
+    age: 20
+  },
+  {
+    id: 2,
+    name: "Amit",
+    age: 26
+  },
+  {
+    id: 3,
+    name: "Nikhil",
+    age: 28
+  },
+]
+// find the average age of users
+const totalAge = users.reduce((prev, curr) => prev + curr.age, 0)
+console.log("//// total age", totalAge)
+console.log("//// average age", totalAge / users.length)
