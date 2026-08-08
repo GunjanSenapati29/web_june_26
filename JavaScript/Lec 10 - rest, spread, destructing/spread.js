@@ -59,18 +59,79 @@
 // Object.assign(copyUser1, user) // target, source
 // console.log(copyUser1)
 
+// const employee = {
+//     id: 101,
+//     name: "Aju",
+//     age: 23,
+//     address: {
+//         city: "BBSR",
+//         pin: '751007'
+//     }
+// }
+
+// const copyEmployee = {...employee}
+// copyEmployee.address.city = 'CTC'
+// console.log(employee)
+
+// Task is to deep copy nested object not  shallow object
+// 1. structuredClone()
+// const employee = {
+//     id: 101,
+//     name: "Aju",
+//     age: 23,
+//     address: {
+//         city: "BBSR",
+//         pin: "751007"
+//     }
+// };
+
+// // Deep Copy
+// const copyEmployee = structuredClone(employee);
+
+// copyEmployee.address.city = "CTC";
+
+// console.log(employee);
+// console.log(copyEmployee);
+
+// 2. JSON.parse(JSON.stringify())
+// const employee = {
+//     id: 101,
+//     name: "Aju",
+//     age: 23,
+//     address: {
+//         city: "BBSR",
+//         pin: "751007"
+//     }
+// };
+
+// // Deep Copy using JSON
+// const copyEmployee = JSON.parse(JSON.stringify(employee));
+
+// copyEmployee.address.city = "CTC";
+
+// console.log(employee);
+// console.log(copyEmployee);
+
+// 3. Manual Deep Copy
 const employee = {
     id: 101,
     name: "Aju",
     age: 23,
     address: {
         city: "BBSR",
-        pin: '751007'
+        pin: "751007"
     }
-}
+};
 
-const copyEmployee = {...employee}
-copyEmployee.address.city = 'CTC'
-console.log(employee)
+// Manual Deep Copy
+const copyEmployee = {
+    ...employee,
+    address: {
+        ...employee.address
+    }
+};
 
-// Task is to deep copy nested object not  shallow object
+copyEmployee.address.city = "CTC";
+
+console.log(employee);
+console.log(copyEmployee);
